@@ -4,9 +4,11 @@
 </h1>
 
 <p class="date">
-	Submitted <%= time_ago_in_words(@post.created_at)%> Ago 	| 
+	Submitted <%= time_ago_in_words(@post.created_at)%> Ago 
+	<% if user_signed_in? %>	| 
 	<button class="button"><%= link_to 'Edit', edit_post_path(@post) %></button>	
 	<button class="button"><%= link_to 'Destroy', post_path(@post), method: :delete,data:{confirm: 'Are you sure?'} %></button>
+	<% end %>
    
 </p>
 <p class="body">
