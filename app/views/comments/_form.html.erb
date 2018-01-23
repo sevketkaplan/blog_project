@@ -1,14 +1,9 @@
-<%=form_for ([@post, @post.comments.build]) do |f|%>
-<p>
-	<%= f.label :name%><br>
-	<%= f.text_field :name%>
-</p>
-<p>
-	<%= f.label :body%><br>
-	<%= f.text_area :body%>
-</p>
-<br>
-<p>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+	<%= f.label :name %><br>
+	<%= f.text_field :name %><br>
+	<br>
+	<%= f.label :body %><br>
+	<%= f.text_area :body %><br>
+	<br>
 	<%= f.submit %>
-</p>
 <% end %>
