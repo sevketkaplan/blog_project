@@ -5,10 +5,21 @@ ActiveAdmin.register Post do
 		f.inputs do
 			f.input :user
 			f.input :title	
-			f.input :body
+			f.input :body, :as => :ckeditor
 			f.input :category
 		end
 		f.actions
+	end
+	index do
+		column :id
+		column :title
+		column :user
+		column :created_at
+		column :update_at
+		column :published_at
+		column :category
+
+		actions
 	end
 
 	scope :all

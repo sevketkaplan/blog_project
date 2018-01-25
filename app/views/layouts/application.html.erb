@@ -30,6 +30,14 @@
 			<li><a href="#">Youtube</a></li>
 			<li><a href="mailto:birtutamkod@gmail.com">Email</a></li>
 		</ul>
+		<ul> 
+			<li class="category" style="font-size: 18px">Categories</li>
+			<% Category.all.each do |category| %>
+			
+				<li> <%=link_to category.name,category_path(category) %></li>
+
+			<%end%>
+		</ul>
 
 		<% if !user_signed_in? %>
 		<p class="sign_in"><%= link_to('Admin Login',  new_admin_user_session_path)  %> </p>

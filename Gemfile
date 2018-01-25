@@ -33,6 +33,8 @@ gem 'devise'
 gem 'bcrypt', platforms: :ruby
 gem 'activeadmin'
 gem 'paperclip'
+gem 'ckeditor'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

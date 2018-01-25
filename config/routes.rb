@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 	end 
   root "posts#index"
   get '/about', to: 'pages#about'
+  get 'category/:id',to:'category#show', as: 'category'
 end

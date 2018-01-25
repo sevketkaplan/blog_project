@@ -1,9 +1,12 @@
 <div id="post_content">
 <h1 class="title">
 	<%= @post.title %>
+
 </h1>
 
 <p class="date">
+	Category: <%= @post.category.name %><br>
+
 	Submitted <%= time_ago_in_words(@post.created_at)%> Ago 
 </p>
 <p class="body">
